@@ -1,55 +1,80 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background: #f5f6f8;
     font-family: 'Inter', sans-serif;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* 每一屏 */
+.panel {
+    height: 100vh;
+    scroll-snap-align: start;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    text-align: center;
+    padding: 20px;
 }
 
-.card {
-    background: white;
-    width: 500px;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+/* 亮色屏 */
+.light {
+    background: linear-gradient(to bottom, #ffffff, #f5f5f7);
+    color: #1d1d1f;
 }
 
+/* 深色屏 */
+.dark {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* 标题样式 */
 h1 {
+    font-size: 72px;
+    font-weight: 800;
     margin: 0;
-    font-size: 28px;
-}
-
-.subtitle {
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.section {
-    margin-top: 20px;
 }
 
 h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 56px;
+    margin-bottom: 20px;
 }
 
-ul {
-    padding-left: 20px;
+.subtitle {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #6e6e73;
 }
 
-button {
-    margin-top: 30px;
-    padding: 10px 20px;
-    border: none;
-    background: #007aff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
+/* 深色区文字 */
+.dark p {
+    color: #cccccc;
+    max-width: 600px;
 }
 
-button:hover {
-    background: #005ecb;
+/* 项目卡片 */
+.cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card {
+    width: 260px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #f5f5f7;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
 }
