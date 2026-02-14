@@ -5,11 +5,34 @@ html {
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
-/* 每一屏 */
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #1d1d1f;
+    font-weight: 500;
+}
+
+.logo {
+    font-weight: 800;
+}
+
+/* 页面结构 */
 .panel {
     height: 100vh;
     scroll-snap-align: start;
@@ -17,23 +40,36 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px;
     text-align: center;
-    padding: 20px;
 }
 
-/* 亮色屏 */
-.light {
+.hero {
     background: linear-gradient(to bottom, #ffffff, #f5f5f7);
     color: #1d1d1f;
 }
 
-/* 深色屏 */
-.dark {
-    background: #000000;
-    color: #ffffff;
+.subtitle {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #6e6e73;
 }
 
-/* 标题样式 */
+.light {
+    background: #ffffff;
+    color: #1d1d1f;
+}
+
+.dark {
+    background: #000;
+    color: white;
+}
+
+.footer {
+    background: #111;
+    color: #aaa;
+}
+
 h1 {
     font-size: 72px;
     font-weight: 800;
@@ -41,40 +77,26 @@ h1 {
 }
 
 h2 {
-    font-size: 56px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
-.subtitle {
-    margin-top: 20px;
-    font-size: 22px;
-    color: #6e6e73;
+.content {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
-/* 深色区文字 */
-.dark p {
-    color: #cccccc;
-    max-width: 600px;
+/* 动画 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
 }
 
-/* 项目卡片 */
-.cards {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.card {
-    width: 260px;
-    padding: 30px;
-    border-radius: 20px;
-    background: #f5f5f7;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
-}
+.delay { transition-delay: 0.3s; }
