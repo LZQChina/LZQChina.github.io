@@ -1,17 +1,21 @@
-const faders = document.querySelectorAll('.fade-in');
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const items = document.querySelectorAll(".portfolio-item img");
+const closeBtn = document.querySelector(".close");
 
-const appearOptions = {
-    threshold: 0.3
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-    });
-}, appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+items.forEach(item => {
+    item.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
 });
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+modal.onclick = function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+}
