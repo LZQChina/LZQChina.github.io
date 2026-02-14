@@ -2,47 +2,50 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>吕泽卿 | 个人网站</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吕泽卿 | Engineering</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <section class="panel light">
+        <h1>Think Different.</h1>
+        <p class="subtitle">
+            吕泽卿 · 微电子科学与工程<br>
+            信号系统 · FPGA · 数字设计
+        </p >
+    </section>
 
-        <header>
-            <h1>你好！这里是东门吹雨LZQ的个人网站</h1>
-            <p>青岛大学 · 微电子科学与工程</p >
-        </header>
+    <section class="panel dark">
+        <h2>Engineering the Future.</h2>
+        <p>
+            用数字逻辑构建可靠系统，
+            让每一条信号都精准运行。
+        </p >
+    </section>
 
-        <section>
-            <h2>关于我</h2>
-            <p>
-                目前是大一新生，
-                正在学习算法竞赛，以及部分专业知识。
-            </p >
-        </section>
+    <section class="panel light">
+        <h2>Projects.</h2>
 
-        <section>
-            <h2>项目</h2>
-            <ul>
-                <li>暂无</li>
-                <li>暂无</li>
-                <li>暂无</li>
-            </ul>
-        </section>
+        <div class="cards">
+            <div class="card">
+                <h3>FPGA 控制系统</h3>
+                <p>Verilog 时序设计与状态机实现。</p >
+            </div>
 
-        <section>
-            <h2>联系方式</h2>
-            <p>Email: 2975536244@qq.com</p >
-            <p>GitHub: github.com/yourname</p >
-        </section>
+            <div class="card">
+                <h3>数字滤波优化</h3>
+                <p>FIR / IIR 频域性能优化。</p >
+            </div>
 
-        <footer>
-            <p>© 2026 吕泽卿</p >
-        </footer>
-
-    </div>
+            <div class="card">
+                <h3>频谱分析工具</h3>
+                <p>FFT 算法与信号可视化。</p >
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
