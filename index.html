@@ -1,85 +1,72 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Think Different | LZQ</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Think Different | LZQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav class="navbar">
+<header class="nav">
     <div class="logo">LZQ</div>
-    <div class="nav-links">
+    <nav>
         <a href=" ">About</a >
-        <a href="#portfolio">Portfolio</a >
-        <a href="#contact">Contact</a >
-    </div>
-</nav>
+        <a href="#portfolio">Works</a >
+    </nav>
+</header>
 
+<!-- Hero -->
 <section class="hero">
-    <h1>Think Different.</h1>
-    <p>
-        东门吹雨LZQ · QDU · 微电子科学与工程<br>
-        算法竞赛 · 高中数学 · 平面设计
-    </p >
+    <h1>Think<br>Different.</h1>
+    <p>Design · Engineering · Identity</p >
 </section>
 
-<section class="section light" id="about">
+<!-- About -->
+<section class="section reveal" id="about">
     <h2>About Me</h2>
     <p class="content">
-        青岛大学微电子科学与工程大一学生，
-        目前专注于竞赛、学业与个人自媒体建设。
-        正在准备蓝桥杯与电子设计大赛，
-        目标为研究生阶段进一步深造。
+        青岛大学 · 微电子科学与工程<br>
+        在工程理性与视觉表达之间，构建自己的世界。
     </p >
 </section>
 
-<section class="portfolio-section" id="portfolio">
-    <div class="portfolio-header">
-        <h2>Visual Portfolio</h2>
-        <p>Design · Illustration · Branding</p >
+<!-- Portfolio -->
+<section class="portfolio reveal" id="portfolio">
+    <h2>Selected Works</h2>
+
+    <div class="grid">
+
+        <div class="card" data-title="Brand Identity" data-desc="Logo Design">
+            <img src="images/logo.jpg">
+        </div>
+
+        <div class="card" data-title="Portrait Study" data-desc="Illustration">
+            <img src="images/portrait.jpg">
+        </div>
+
+        <div class="card" data-title="Still Life" data-desc="Pencil Drawing">
+            <img src="images/drawing.jpg">
+        </div>
+
+        <div class="card" data-title="Event Poster" data-desc="Visual Design">
+            <img src="images/poster.jpg">
+        </div>
+
     </div>
+</section>
 
-    <div class="portfolio-grid">
-        <div class="portfolio-item">
-            <img src="images/logo.jpg" alt="">
-        </div>
-
-        <div class="portfolio-item">
-            <img src="images/portrait.jpg" alt="">
-        </div>
-
-        <div class="portfolio-item">
-            <img src="images/drawing.jpg" alt="">
-        </div>
-
-        <div class="portfolio-item">
-            <img src="images/poster.jpg" alt="">
-        </div>
+<!-- Fullscreen Project -->
+<div class="project-view" id="project">
+    <span class="close">×</span>
+    < img id="project-img">
+    <div class="project-text">
+        <h3 id="project-title"></h3>
+        <p id="project-desc"></p >
     </div>
-</section>
-
-<section class="section dark">
-    <h2>Philosophy</h2>
-    <p class="content">
-        只要思想不滑坡，方法总比困难多。
-    </p >
-</section>
-
-<section class="section footer" id="contact">
-    <h2>Contact</h2>
-    <p>GitHub: github.com/LZQChina</p >
-    <p>Email: 2975537244@qq.com</p >
-    <p>Bilibili: @东门吹雨LZQ</p >
-</section>
+</div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
-
-
-
-
